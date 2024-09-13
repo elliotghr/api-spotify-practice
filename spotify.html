@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-gitscale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main>
@@ -16,13 +16,14 @@
               name="q"
               id="artist"
               placeholder="find something..."
+              value="oasis"
             />
             <select name="type" id="type">
               <option value="artist">artist</option>
               <option value="track" selected>track</option>
               <option value="album">album</option>
             </select>
-            <input type="text" name="limit" value="5" hidden />
+            <input type="text" name="limit" value="7" hidden />
             <button type="submit">Search</button>
           </form>
         </div>
@@ -36,9 +37,8 @@
     </footer>
 
     <template id="result-card">
-      <div class="result-container">
-        <div class="result content">
-          <div class="header"></div>
+      <div class="card-container">
+        <div class="card-content">
           <div class="image">
             <img />
           </div>
@@ -49,5 +49,5 @@
       </div>
     </template>
   </body>
-  <script src="./index.js" type="module"></script>
+  <script src="./js/index.js" type="module"></script>
 </html>

@@ -9,7 +9,7 @@ function getImagePath(type, item) {
   switch (type) {
     case "artist":
     case "album":
-      return item.images[0].url;
+      return item.images[0]?.url;
 
     case "track":
       return item.album.images[0].url;
@@ -22,7 +22,10 @@ function getImagePath(type, item) {
 function getData(items, $fragment, $template, type) {
   items.forEach((item) => {
     $template.querySelector(".footer .name").textContent = item.name;
-    $template.querySelector(".image img").src = getImagePath(type, item);
+    const image = getImagePath(type, item);
+
+    const imageRes = image ? image : "./assets/Unknown_person.jpg";
+    $template.querySelector(".image img").src = imageRes;
 
     let $clone = document.importNode($template, true);
     $fragment.appendChild($clone);

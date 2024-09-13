@@ -1,15 +1,15 @@
-import { fetchHelper } from "./fetchHelper.js";
+import { fetchHelper } from "./helper/fetchHelper.js";
 import { getCardInformation } from "./searchCatalogue.js";
+import { getFormData } from "./helper/formHelper.js";
 
 document.addEventListener("DOMContentLoaded", (e) => {
   document.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const $form = e.target.closest("form");
-    const $submitter = e.target.querySelector("button");
+    const formData = getFormData(e);
 
-    const formData = new FormData($form, $submitter);
-    let type = formData.get("type");
+    const type = formData.get("type");
+
     // Convertimos FormData a query params
     const queryParams = new URLSearchParams(formData).toString();
 
