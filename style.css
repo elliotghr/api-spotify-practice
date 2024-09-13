@@ -1,0 +1,53 @@
+@import url("reset.css");
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+.search-container {
+  width: inherit;
+  min-height: 20%;
+}
+
+.search-content {
+  width: inherit;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.search-content form {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+select {
+  cursor: pointer;
+}
+
+button {
+  width: auto;
+  border-color: rgba(61, 61, 61, 0.562);
+  border-width: 1px;
+  box-shadow: 2px 4px 5px rgb(160, 160, 160);
+  cursor: pointer;
+}
+.result-container {
+  width: inherit;
+  height: 80%;
+}

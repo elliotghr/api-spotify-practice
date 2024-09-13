@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="search-container">
+        <div class="search-content">
+          <form action="">
+            <input
+              type="text"
+              name="q"
+              id="artist"
+              placeholder="find something..."
+            />
+            <select name="type" id="type">
+              <option value="artist">artist</option>
+              <option value="track" selected>track</option>
+              <option value="album">album</option>
+            </select>
+            <input type="text" name="limit" value="5" hidden />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="result-container">
+        <div class="result-content"></div>
+      </div>
+    </main>
+    <footer>
+      <div></div>
+    </footer>
+
+    <template id="result-card">
+      <div class="result-container">
+        <div class="result content">
+          <div class="header"></div>
+          <div class="image">
+            <img />
+          </div>
+          <div class="footer">
+            <span class="name"></span>
+          </div>
+        </div>
+      </div>
+    </template>
+  </body>
+  <script src="./index.js" type="module"></script>
+</html>
